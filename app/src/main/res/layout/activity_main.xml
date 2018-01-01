@@ -7,6 +7,7 @@
     tools:context="io.repro.reprodemo.bodysizechecker.MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -86,18 +87,21 @@
         android:id="@+id/save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="39dp"
         android:onClick="onSaveTapped"
         android:text="保存"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="424dp" />
+        app:layout_constraintRight_toRightOf="parent" />
 
     <ImageButton
         android:id="@+id/height_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_height"
-        tools:layout_editor_absoluteX="299dp"
-        tools:layout_editor_absoluteY="5dp" />
+        android:layout_marginEnd="13dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_height" />
 
 </android.support.constraint.ConstraintLayout>
