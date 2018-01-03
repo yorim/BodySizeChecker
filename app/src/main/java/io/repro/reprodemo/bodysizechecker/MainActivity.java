@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import com.google.firebase.iid.FirebaseInstanceId;
+
 public class MainActivity extends AppCompatActivity {
     private static final String NECK = "NECK";
     private static final String SLEEVE = "SLEEVE";
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText editSleeve;
     private EditText editWaist;
     private EditText editInseam;
+    String token = FirebaseInstanceId.getInstance().getToken();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
