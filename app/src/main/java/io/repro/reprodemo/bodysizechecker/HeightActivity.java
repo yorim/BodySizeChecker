@@ -120,7 +120,7 @@ public class HeightActivity extends AppCompatActivity {
         editor.putInt(HEIGHT, Integer.parseInt(mHeight.getText().toString().trim()));
         editor.commit();
     }
-
+//----------------------工事中-----------------------------------------------------------------------
     public void setHeightButtonTapped(View view) {
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = pref.edit();
