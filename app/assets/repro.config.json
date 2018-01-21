@@ -1,0 +1,133 @@
+{
+  "env": "staging",
+  "flags": {
+    "dummyAd": 0,
+    "dummyAdDuration": 0,
+    "localConfig": "",
+    "localNotification": "",
+    "inAppArchivable": true,
+    "resetShownMessages": false,
+    "webview": "https://s3-ap-northeast-1.amazonaws.com/cdn.repro.io/js/v1/index.html"
+  },
+  "user": {
+    "id": "member9999",
+    "profile": {
+      "string": {
+        "花": "桜",
+        "国籍":"バングラデシュ"
+      },
+      "int": {
+        "Age": 20
+      },
+      "Local": {
+        "local": ""
+      },
+      "decimal": {
+        "height": 0.1,
+        "weight": 3.0E-15
+      },
+      "datetime": {
+        "dead": ""
+      }
+    }
+  },
+  "local": {
+    "token": "9cd1002e-39d3-4a80-876f-31417183b90f",
+    "server": {
+      "insightConfURL": "http://api.localhost.local:3000/v1/insights/config",
+      "surveyConfURL": "http://api.localhost.local:3000/v1/surveys/config",
+      "surveyRespURL": "http://api.localhost.local:3000/v1/respondents/create",
+      "websiteURL": "http://localhost.local:3000/",
+      "porterURL": "http://porter.localhost.local:56000/upload"
+    },
+    "aws": {
+      "s3BucketMovie": "repro-clip-source-local",
+      "s3BucketSession": "repro-data-source-local",
+      "s3BucketMovieEvent": "repro-raw-clip-local",
+      "s3BucketLog": "repro-sdk-log-local"
+    },
+    "push": {
+      "senderID": ""
+    },
+    "user": "chuck",
+    "password": "norris"
+  },
+  "vagrant": {
+    "token": "9cd1002e-39d3-4a80-876f-31417183b90f",
+    "server": {
+      "insightConfURL": "https://api.repro-local.dev/v1/insights/config",
+      "surveyConfURL": "https://api.repro-local.dev/v1/surveys/config",
+      "websiteURL": "https://repro-local.dev/",
+      "porterURL": "http://porter.repro-local.dev:56000/upload"
+    },
+    "aws": {
+      "s3BucketMovie": "repro-clip-source-local",
+      "s3BucketSession": "repro-data-source-local",
+      "s3BucketMovieEvent": "repro-raw-clip-local",
+      "s3BucketLog": "repro-sdk-log-local"
+    },
+    "push": {
+      "senderID": ""
+    },
+    "user": "chuck",
+    "password": "norris"
+  },
+  "development": {
+    "token": "1f670966-8a31-4b7d-80b8-b212b58b0409",
+    "server": {
+      "insightConfURL": "https://development-api.repro.io/v1/insights/config",
+      "surveyConfURL": "https://development-api.repro.io/v1/surveys/config",
+      "websiteURL": "https://develop.repro.io/",
+      "porterURL": "https://development.repro.io:56000/upload"
+    },
+    "aws": {
+      "s3BucketMovie": "repro-clip-source-development",
+      "s3BucketSession": "repro-data-source-development",
+      "s3BucketMovieEvent": "repro-raw-clip-development",
+      "s3BucketLog": "repro-sdk-log-development"
+    },
+    "push": {
+      "senderID": ""
+    },
+    "user": "chuck",
+    "password": "norris"
+  },
+  "staging": {
+    "token": "560281f3-459a-4c68-aafa-b7ebab0cef7d",
+    "server": {
+      "insightConfURL": "https://staging-api.repro.io/v1/insights/config",
+      "surveyConfURL": "https://staging-api.repro.io/v1/surveys/config",
+      "websiteURL": "https://staging.repro.io/",
+      "porterURL": "https://staging.repro.io:56000/upload"
+    },
+    "aws": {
+      "s3BucketMovie": "repro-clip-source-staging",
+      "s3BucketSession": "repro-data-source-staging",
+      "s3BucketMovieEvent": "repro-raw-clip-staging",
+      "s3BucketLog": "repro-sdk-log-staging"
+    },
+    "push": {
+      "senderID": "113289413509"
+    },
+    "user": "chuck",
+    "password": "norris"
+  },
+  "production": {
+    "token": "fcfbcbec-11dd-4b76-a3ff-1b7829a594b4",
+    "server": {
+      "insightConfURL": "https://api.repro.io/v1/insights/config",
+      "surveyConfURL": "https://api.repro.io/v1/surveys/config",
+      "websiteURL": "https://repro.io/",
+      "porterURL": "https://porter.repro.io/upload"
+    },
+    "aws": {
+      "s3BucketMovie": "repro-clip-source",
+      "s3BucketSession": "repro-data-source",
+      "s3BucketMovieEvent": "repro-raw-clip",
+      "s3BucketLog": "repro-sdk-log"
+    },
+    "push": {
+      "senderID": "113289413509"
+    }
+  }
+}
