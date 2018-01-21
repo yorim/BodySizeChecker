@@ -42,6 +42,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".HeightActivity"></activity>
+
         <!-- [START firebase_service] -->
         <service
             android:name=".MyFirebaseMessagingService">
