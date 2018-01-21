@@ -1,17 +1,64 @@
-machine:
-    java:
-        version: openjdk7 # デフォルトはopenjdk7
-    environment:
-        ANDROID_HOME: ~/Applications/android-sdk-macosx # なくてもよい。                                                                                                     
+#machine:
+#    java:
+#        version: openjdk7 # デフォルトはopenjdk7
+##    environment:
+##        ANDROID_HOME: ~/Applications/android-sdk-macosx # なくてもよい。
+#
+#dependencies:
+#    override:
+#        - echo y | android update sdk --no-ui --filter "android-26, build-tools-26.0.1" # デフォルトで導入されているパッケージは入れる必要なし。下記参照
+#test:
+#    override:
+#        - ./gradlew test
+#deployment:
+#    develop:
+#        branch: add_FCM_2
+#        commands:
+#            - ./gradlew assembleDebug
 
-dependencies:
-    override:
-        - echo y | android update sdk --no-ui --filter "android-23, build-tools-23.0.1" # デフォルトで導入されているパッケージは入れる必要なし。下記参照
-test:
-    override:
-        - ./gradlew test
-deployment:
-    develop:
-        branch: 3.0.0/develop
-        commands:
-            - ./gradlew assembleDebug
+
+# Java Gradle CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-java/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/openjdk:8-jdk
+
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/postgres:9.4
+
+    working_directory: ~/repo
+
+    environment:
+      # Customize the JVM maximum heap limit
+      JVM_OPTS: -Xmx3200m
+      TERM: dumb
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "build.gradle" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run: gradle dependencies
+
+      - save_cache:
+          paths:
+            - ~/.gradle
+          key: v1-dependencies-{{ checksum "build.gradle" }}
+
+      # run tests!
+      - run: gradle test
+
+
+

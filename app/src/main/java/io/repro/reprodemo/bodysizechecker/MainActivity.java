@@ -77,15 +77,15 @@ public class MainActivity extends AppCompatActivity {
 
         mNotificationManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
         int notifyID = 0;
-        NotificationCompat.Builder mNotifyBuilder  = new NotificationCompat.Builder(this)
-                .setContentTitle("New Message")
-                .setContentText("You've received New message!")
-                .setSmallIcon(R.drawable.ic_stat_ic_notification)
-                .setBadgeIconType(1)
-                .setWhen(60000)
-                .setAutoCancel(true);
-        mNotifyBuilder.setBadgeIconType(3);
-        mNotificationManager.notify(null,123,mNotifyBuilder.build());
+//        NotificationCompat.Builder mNotifyBuilder  = new NotificationCompat.Builder(this)
+//                .setContentTitle("New Message")
+//                .setContentText("You've received New message!")
+//                .setSmallIcon(R.drawable.ic_stat_ic_notification)
+//                .setBadgeIconType(1)
+//                .setWhen(60000)
+//                .setAutoCancel(true);
+//        mNotifyBuilder.setBadgeIconType(3);
+//        mNotificationManager.notify(null,123,mNotifyBuilder.build());
 
 
 
