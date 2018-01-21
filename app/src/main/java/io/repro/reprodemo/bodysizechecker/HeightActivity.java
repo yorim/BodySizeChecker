@@ -113,7 +113,7 @@ public class HeightActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onPause() {
+    protecause() {
         super.onPause();
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         SharedPreferences.Editor editor = pref.edit();
